@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap" rel="stylesheet">
+
+    <title>Responsive Porfolio Website</title>
+</head>
+<body>
+    <style>
+        :root{
+            --f-style:italic;
+            --f-color:#5361FF;
+        }
+        body{
+            background:#1e272e;
+            overflow-x:hidden;
+        }
+        
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        #main-bar{
+            width:100%;
+            height:15px;
+            background:black;
+            position:fixed;
+            top:0;
+        }
+        #main-bar1{
+            width:0%;
+            height:15px;
+            background:blue;
+        }
+        .main{
+            background: #5361FF;
+            height:400px;
+            width:100%;
+            isolation: isolate;
+            background-size:100% 100%;
+            background-position: center;
+            background-attachment: fixed;
+         }
+        .main h4{
+             padding:1.5rem;
+             margin-left:8rem;
+             color:#ffff;
+             font-style:var(--f-style);
+        }
+        .main h1{
+            margin-left:6rem;
+            padding:3rem;
+            font-size:5rem;
+            text-transform: uppercase;
+            color:#ffff;
+ 
+        }
+        .main img{
+            margin-top:-28rem;
+            margin-left:45rem;
+          }
+          .about{
+              padding:3rem;
+              margin-left:4rem;
+             }
+          .About{
+              column-count:2;
+              background:black;
+              isolation: isolate;
+           }
+          .about img{
+
+            width:200px;
+            border-radius:100%;
+             background:#6c5ce7;
+  
+  
+          }
+          .about h1{
+               
+             color:var( --f-color);
+             padding:1rem;
+             text-decoration:6px solid #6c5ce7 underline;
+             font-style:var(--f-style);
+
+           }
+           .about p{
+               padding:1rem;
+               color:#d2dae2;
+                line-height: 1.5rem;
+               letter-spacing: normal;
+               font-size:1.1rem;
+            }
+            .about i{
+                padding:0.7rem;
+                cursor: pointer;
+            }
+            .about i:hover{
+                opacity:0.6;
+            }
+            .Skill{
+                padding:4rem;
+              }
+            .Skill h1{
+                display: flex;
+                justify-content: center;
+                font-style:var(--f-style);
+                color:var(--f-color);
+
+
+            }
+            .myskills h1{
+                color:#5361FF;
+                text-decoration: 8px solid #5361FF underline;
+                font-style:var(--f-style);
+
+            }
+            #progress-container{
+                width:40%;
+                height:25px;
+                border-radius:3px;
+                background:#b2bec3;
+                color:#ffff;
+                
+             }
+          #progress-bar{
+              width:65%;
+              height:25px;
+              border-radius:3px;
+              background:#e67e22;
+           }
+          .bar{
+              margin:20px;
+              padding:3rem;
+              line-height:2.3rem;
+              column-count: 2;
+              color:black;
+             
+              
+           }
+           
+
+           #progress-container{
+                width:70%;
+                height:25px;
+                border-radius:3px;
+                background:#b2bec3;
+                color:#ffff;
+                
+             }
+          #progress-bar{
+              width:35%;
+              height:25px;
+              border-radius:3px;
+              background:#ffaf40;
+          }
+
+          #progress-container1{
+                width:70%;
+                height:25px;
+                border-radius:3px;
+                background:#b2bec3;
+                color:#ffff;
+                
+             }
+          #progress-bar1{
+              width:35%;
+              height:25px;
+              border-radius:3px;
+              background:#0984e3;
+          }
+          #progress-container2{
+                width:70%;
+                height:25px;
+                border-radius:3px;
+                background:#b2bec3;
+                color:#ffff;
+                
+             }
+          #progress-bar2{
+              width:35%;
+              height:25px;
+              border-radius:3px;
+              background:#fed330;
+          }
+
+          #progress-container3{
+                width:70%;
+                height:25px;
+                border-radius:3px;
+                background:#b2bec3;
+                color:#ffff;
+                
+             }
+          #progress-bar3{
+              width:35%;
+              height:25px;
+              border-radius:3px;
+              background:#3867d6;
+          }
+
+          #progress-container4{
+                width:70%;
+                height:25px;
+                border-radius:3px;
+                background:#b2bec3;
+                color:#ffff;
+                
+             }
+          #progress-bar4{
+              width:35%;
+              height:25px;
+              border-radius:3px;
+              background:#fc5c65;
+          }
+
+
+          #progress-container5{
+                width:70%;
+                height:25px;
+                border-radius:3px;
+                background:#b2bec3;
+                color:#ffff;
+                
+             }
+          #progress-bar5{
+              width:35%;
+              height:25px;
+              border-radius:3px;
+              background:#3d3d3d;
+          }
+          .icons1 i{
+              padding:0.3rem;
+          }
+          
+           
+          .showcase h1{
+            color:var( --f-color);
+            text-decoration: 6px solid #0984e3 underline;
+            padding:1rem;
+            font-style:var(--f-style);
+ 
+          }
+         .showcase h1,p{
+             display: flex;
+             justify-content: center;
+             font-size:2rem;
+             color:var(--f-color);
+             font-style:var(--f-style);
+
+
+             
+           }
+           .images img{
+               width:300px;
+               height:300px;
+           }
+           .portfolio{
+               display: grid;
+               grid-template-columns: auto auto auto;
+               padding:2.5rem;
+               
+                
+             }
+             .portfolio img:hover{
+                 opacity:0.8;
+             }
+             .icons2{
+                 text-align:left;
+              }
+              
+              .qualifications h1{
+                  display: flex;
+                  justify-content: center;
+                  padding:2rem;
+                  text-decoration: 6px solid #18dcff underline;
+                  font-style:var(--f-style);
+                  color:var( --f-color);
+
+
+              }
+              #heading {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+  margin:auto;
+  
+}
+
+#heading td, #heading th {
+  border: 1px solid #ddd;
+  padding: 6px;
+}
+
+#heading tr:nth-child(even){
+    background-color:#18dcff;
+    color:#ffff;
+    }
+
+#heading tr:hover {
+    background-color: #ddd;
+    }
+
+#heading th {
+  padding-top: 12px;
+  padding-bottom:12px;
+  text-align: left;
+  background-color:#ff4d4d;
+  color: red;
+}
+.certifications h3{
+
+    display: flex;
+    justify-content: center;
+    padding:3rem;
+    font-size:2rem;
+    text-decoration: 6px solid #18dcff underline;
+    font-style:var(--f-style);
+    color:var( --f-color);
+
+
+
+}
+
+.certifications{
+    padding:4rem;
+    line-height: 3em;
+  }
+ .certifications li{
+     font-size:1.3rem;
+     color:black;
+ }
+ .personal{
+     padding:3rem;
+ }
+ .personal li{
+     font-size:1.3rem;
+     color:black;
+     padding:1rem;
+ }
+ .personal h1{
+     display: flex;
+     justify-content: center;
+     text-decoration: 6px solid #18dcff underline;
+     padding:2rem;
+     font-style:var(--f-style);
+     color:var( --f-color);
+
+
+
+ }
+ .contact h1{
+     display: flex;
+     justify-content: center;
+     text-decoration: 6px solid #18dcff underline;
+     color:#18dcff;
+     padding:2rem;
+     color:var( --f-color);
+     font-style:var(--f-style);
+
+
+
+ }
+ .contact i{
+     column-count:3;
+     padding:1.5rem;
+     display: flex;
+     justify-content: center;
+ }
+               
+          
+             
+              @media(max-width:1114px){
+                  *{
+                      font-size:1rem;
+                  }
+                  .container{
+                      display: grid;
+                      grid-template-columns: 1fr;
+                  
+ 
+   
+                  }
+                  .about h1{
+                      font-size:2rem;
+                  }
+                    
+                  .portfolio img{
+                      display: grid;
+                      grid-template-columns: auto;
+                      padding:3rem;
+                       margin-left:400px;
+                     }
+                     .showcase h1,p{
+                         font-size:5rem;
+                     }
+                     .icons2 {
+                        text-align: center;
+                         margin-left:150px;
+                        
+                       }
+                       #main-bar{
+            width:100%;
+            height:15px;
+            background:red;
+            position:fixed;
+            top:0;
+
+                       }
+                  
+        #main-bar1{
+            width:0%;
+            height:15px;
+            background:blue;
+             
+        }
+        .qualifications h1{
+            font-size:5rem;
+        }
+        
+        #heading td,th{
+            font-size:2.7rem;
+        }
+         
+        .certifications h3{
+            font-size:5rem;
+        }
+        .certifications li{
+            font-size:3rem;
+        }
+          
+        .personal h1{
+            font-size:5rem;
+        }
+        .personal li{
+            font-size:2.7rem;
+            color:black;
+           }
+        .contact h1{
+            font-size:5rem;
+        }
+        .contact i{
+            font-size:3rem;
+        }
+              }
+         
+              
+             
+    </style>
+    <div class = "container">
+        <div id = "main-bar">
+            <div id = "main-bar1">
+
+            </div>
+        </div>
+        <div class = "main" data-aos="fade-left" >
+            <h4>Saleh Imtiaz</h4>
+ 
+            <h1>He<br>llo.</h1>
+            <img src = "saleh.png" alt= "">
+         </div>
+        <div class = "About" data-aos="fade-left">
+         <div class = "about">
+            <img src = "saleh.png" alt="">
+            <h1>About Myself</h1>
+            <p>Hello,this is Saleh Imtiaz.I'm an undergraduate student in AIUB(final year).I'm very keen and passionate about Web Designing & Web Development.</p>
+            <a href="https://github.com/Techyy87saleh">  <i class="fa fa-github"  style="font-size:36px"></i></a>
+  </div>    
+</div>
+ 
+<div class = "Skill" data-aos="fade-left">
+    <div class = "myskills">
+        <h1>Technical Skills</h1>
+    </div>
+    <div class = "bar">
+        <h3>HTML</h3>
+     <div id = "progress-container">
+         <div id = "progress-bar" style="width:85%">85%</div> 
+         </div>  
+         <h3>CSS</h3>
+         <div id = "progress-container1">
+            <div id = "progress-bar1" style="width:80%">80%</div>   
+
+         </div>
+
+         <h3>Javascript</h3>
+         <div id = "progress-container2">
+            <div id = "progress-bar2" style="width:55%">55%</div>   
+
+         </div>
+
+         <h3>Jquery</h3>
+         <div id = "progress-container3">
+            <div id = "progress-bar3" style="width:45%">45%</div>   
+
+         </div>
+
+         <h3>Sass</h3>
+         <div id = "progress-container4">
+            <div id = "progress-bar4" style="width:60%">60%</div>   
+
+         </div>
+
+
+
+           <h3>Wordpress Eliminator</h3>
+         <div id = "progress-container5">
+            <div id = "progress-bar5" style="width:40%">40%</div>   
+
+         </div>
+         <img src = "design.jpg" alt="">
+         <div class = "icons1">
+         <a href="https://github.com/Techyy87saleh">  <i class="fa fa-github"  style="font-size:36px"></i></a>
+         </div>
+</div>
+</div>
+   <div class = "showcase" data-aos="fade-left">
+
+  <h1>Portfolio</h1>
+  <p>Some of my works are:</p>
+
+   </div>
+  <div class = "portfolio" data-aos="fade-right">
+  <div class = "images">
+   <img src = "1.jpg" alt="">
+  <img src = "2.jpg" alt="">
+  <img src = "3.jpg" alt="">
+  <img src = "4.jpg" alt="">
+  <img src = "5.jpg" alt="">
+  <img src = "6.jpg" alt="">
+  <img src = "7.jpg" alt="">
+  <img src = "8.jpg" alt="">
+  <img src = "9.jpg" alt="">
+  <img src = "10.jpg" alt="">
+ <div class = "icons2">
+    <a href="https://github.com/Techyy87saleh">  <i class="fa fa-github"  style="font-size:36px"></i></a>
+   </div>
+
+</div>
+     </div>
+
+     <div class = "qualifications" data-aos="fade-left">
+         <h1>Academic Qualifications</h1>
+                 <table id="heading">
+                    <tr>
+                    <th>Qualification</th>
+                    <th>Board</th>
+                    <th>Cgpa</th>
+                    <th>Year</th>
+                </tr>
+                <tr>
+                    <td>S.S.C(Science Stream)</td>
+                    <td>DhaKA</td>
+                    <td>4.67</td>
+                    <td>2015</td>
+                </tr>
+                <tr>
+                    <td>H.S.C (Science Stream)</td>
+                    <td>Dhaka</td>
+                    <td>4.58</td>
+                    <td>2017</td>
+                </tr>
+                 
+                <tr>
+                    <td>BSc(Undergraduate)CSE</td>
+                    <td>Amercian International University of Bangladesh</td>
+                    <td>3.50</td>
+                    <td>2018-currently studying</td>
+                </tr>
+                     
+                </tr>
+            </table>   
+            <br>
+            <div class = "certifications" data-aos="fade-left">
+                <h3>Awards/Certifications</h3>
+                <p>
+                    <ul>
+                        <li>Cambridge ESOL(English for Speakers of Other Languages)Entry Level Certificate in ESOL International:Preliminary English Test:Council of Europe Level B1:YLE level:Movers,was awarded the following :<br><br><li>Reading & Writing 5 out of 5<br><br><li>Listening 5 out of 3</li><br><li>Speaking 5 out of 4</li>
+                       </p>
+                    </ul>
+             </div>
+      </div>
+      <div  class = "personal" data-aos="fade-left">
+          <h1>Personal Information</h1>
+          <p>
+              <li>A young, determined hard and smart working person. I believe in task based roles and complete ownership of work.
+               <li>Languages Known:Bengali,English,Arabic,Hindi.</li>
+               <li>Hobbies:I love creating web designing & web development related projects and interested in technologies,surfing Internet, self-learning through e-courses/Jogging,fitness awareness,swimming. </li>
+           </p>
+
+      </div>
+      <div class = "contact" data-aos="fade-left">
+          <h1>Contact</h1>
+           <i class="fa fa-home" style="font-size:30px;color:skyblue">Dhaka,Bangladesh</i> 
+          <i class="fa fa-envelope" style="font-size:30px;color:#ff4d4d">salehimtiaz59@gmail.com</i>
+
+          <i class="fa fa-phone" style="font-size:30px;color:#ffff">+8801798788426</i>
+ 
+
+       </div>
+     </div>
+     <script src = "portfolio.js"></script>
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+  <script>
+    AOS.init({ 
+        offset: 300,
+        duration: 400,
+    });
+  </script>
+     <script>
+
+    let  mainbar1 = document.getElementById('main-bar1');
+    let MaxHeight = document.body.scrollHeight - window.innerHeight;
+
+    window.addEventListener('scroll',()=>{
+
+    let percentage = (window.scrollY / MaxHeight) * 100;
+    mainbar1.style.width = `${percentage}%`;
+    })
+
+
+ 
+
+    
+ const options = {
+   bottom: '64px', // default: '32px'
+   right: 'unset', // default: '32px'
+   left: '32px', // default: 'unset'
+   time: '0.5s', // default: '0.3s'
+   mixColor: '#fff', // default: '#fff'
+   backgroundColor: '#fff',  // default: '#fff'
+   buttonColorDark: '#100f2c',  // default: '#100f2c'
+   buttonColorLight: '#fff', // default: '#fff'
+   saveInCookies: false, // default: true,
+   label: '🌓', // default: ''
+   autoMatchOsTheme: true // default: true
+ }
+ 
+ const darkmode = new Darkmode(options);
+ darkmode.showWidget();
+</script>
+
+   </body>
+</html>
